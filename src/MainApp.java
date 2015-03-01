@@ -494,8 +494,7 @@ public class MainApp extends Application {
 
     private void displayLeagueTable() {
         tablePane.getChildren().clear();
-        tablePane.addRow(0, new HBox(new Label("")), new HBox(new Label("Standings")), new HBox(new Label("G")), new HBox(new Label("W")), new HBox(byPointsRadio.isSelected() ? new Label("D") : new Label("T"))), new HBox(new Label("L")), new HBox(new Label("P")))
-
+        tablePane.addRow(0, new HBox(new Label("")), new HBox(new Label("Standings")), new HBox(new Label("G")), new HBox(new Label("W")), new HBox(byPointsRadio.isSelected() ? new Label("D") : new Label("T")), new HBox(new Label("L")), new HBox(new Label("P")));
 
         for (int i = 0; i < tablePane.getChildren().size(); i++) {
             tablePane.getChildren().get(i).setStyle("-fx-background-color: lightskyblue");
