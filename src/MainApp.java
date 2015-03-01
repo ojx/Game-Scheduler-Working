@@ -418,7 +418,7 @@ public class MainApp extends Application {
         Button cancelButton = new Button("Cancel");
         HBox saveBox = new HBox(cancelButton, saveButton);
         gp.addRow(2, saveBox);
-        gp.setColumnSpan(saveBox, 2);
+        GridPane.setColumnSpan(saveBox, 2);
         
         VBox vBox  =new VBox(gp);
         vBox.setAlignment(Pos.CENTER);
@@ -494,8 +494,8 @@ public class MainApp extends Application {
 
     private void displayLeagueTable() {
         tablePane.getChildren().clear();
-        tablePane.addRow(0, new HBox(new Label("")), new HBox(new Label("Standings")), new HBox(new Label("G")), new HBox(new Label("W")), new HBox(new Label("D")), new HBox(new Label("L")), new HBox(new Label("P")));
-        
+        tablePane.addRow(0, new HBox(new Label("")), new HBox(new Label("Standings")), new HBox(new Label("G")), new HBox(new Label("W")), new HBox(byPointsRadio.isSelected() ? new Label("D") : new Label("T"))), new HBox(new Label("L")), new HBox(new Label("P")))
+
 
         for (int i = 0; i < tablePane.getChildren().size(); i++) {
             tablePane.getChildren().get(i).setStyle("-fx-background-color: lightskyblue");
